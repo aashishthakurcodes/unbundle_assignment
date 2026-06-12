@@ -5,13 +5,25 @@
   align-items: center;
   justify-content: space-between;
   background: #fff;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+.header:hover {
+  box-shadow: 0 8px 20px rgba(139, 92, 246, 0.08);
 }
 
 .logo {
   width: 120px;
   object-fit: contain;
+  transition: transform 0.3s ease;
 }
 
+.logo:hover {
+  transform: scale(1.05);
+}
+
+/* CALL BUTTON */
 .call-btn {
   width: 50px;
   height: 50px;
@@ -21,14 +33,27 @@
   color: white;
   font-size: 22px;
   cursor: pointer;
+  transition: all 0.3s ease;
 }
 
+.call-btn:hover {
+  background: #7c3aed;
+  transform: scale(1.1);
+  box-shadow: 0 10px 25px rgba(139, 92, 246, 0.25);
+}
+
+/* OFFER BAR */
 .offer-bar {
   background: linear-gradient(90deg, #d8f4d2 0%, #d8ebff 100%);
   text-align: center;
   padding: 12px;
   font-size: 15px;
   border-bottom: 2px solid #4fa3ff;
+  transition: all 0.3s ease;
+}
+
+.offer-bar:hover {
+  filter: brightness(1.02);
 }
 
 .strike {
@@ -44,8 +69,10 @@
   justify-content: space-between;
   padding: 0 8%;
   gap: 40px;
+  transition: all 0.3s ease;
 }
 
+/* TEXT */
 .hero-content {
   flex: 1;
   max-width: 550px;
@@ -57,12 +84,22 @@
   color: #111;
   font-weight: 700;
   margin-bottom: 30px;
+  transition: color 0.3s ease;
+}
+
+.hero-content h1:hover {
+  color: #8f65d8;
 }
 
 .hero-content p {
   font-size: 32px;
   line-height: 1.4;
   color: #222;
+  transition: all 0.3s ease;
+}
+
+.hero-content p:hover {
+  transform: translateY(-2px);
 }
 
 .hero-content span {
@@ -70,6 +107,7 @@
   font-weight: 700;
 }
 
+/* IMAGE */
 .hero-image {
   flex: 1;
   display: flex;
@@ -80,9 +118,13 @@
   max-width: 100%;
   width: 500px;
   object-fit: contain;
+  transition: transform 0.5s ease;
 }
 
-/* Tablet */
+.hero-image img:hover {
+  transform: scale(1.05);
+}
+
 @media (max-width: 1024px) {
   .hero-content h1 {
     font-size: 48px;
@@ -97,7 +139,7 @@
   }
 }
 
-/* Mobile */
+/* MOBILE */
 @media (max-width: 768px) {
   .header {
     height: 70px;
@@ -118,15 +160,6 @@
     padding: 40px 20px;
   }
 
-  .hero-content {
-    order: 1;
-  }
-
-  .hero-image {
-    order: 2;
-    justify-content: center;
-  }
-
   .hero-content h1 {
     font-size: 38px;
     margin-bottom: 20px;
@@ -134,6 +167,10 @@
 
   .hero-content p {
     font-size: 20px;
+  }
+
+  .hero-image {
+    justify-content: center;
   }
 
   .hero-image img {
