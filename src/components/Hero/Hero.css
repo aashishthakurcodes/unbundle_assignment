@@ -1,0 +1,161 @@
+.header {
+  height: 80px;
+  padding: 0 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+}
+
+.logo {
+  width: 120px;
+  object-fit: contain;
+}
+
+.call-btn {
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 50%;
+  background: #8f65d8;
+  color: white;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.offer-bar {
+  background: linear-gradient(90deg, #d8f4d2 0%, #d8ebff 100%);
+  text-align: center;
+  padding: 12px;
+  font-size: 15px;
+  border-bottom: 2px solid #4fa3ff;
+}
+
+.strike {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.hero {
+  background: #f8f5fd;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 8%;
+  gap: 40px;
+}
+
+.hero-content {
+  flex: 1;
+  max-width: 550px;
+}
+
+.hero-content h1 {
+  font-size: 64px;
+  line-height: 1.1;
+  color: #111;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.hero-content p {
+  font-size: 32px;
+  line-height: 1.4;
+  color: #222;
+}
+
+.hero-content span {
+  color: #8f65d8;
+  font-weight: 700;
+}
+
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.hero-image img {
+  max-width: 100%;
+  width: 500px;
+  object-fit: contain;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .hero-content h1 {
+    font-size: 48px;
+  }
+
+  .hero-content p {
+    font-size: 24px;
+  }
+
+  .hero-image img {
+    width: 400px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .header {
+    height: 70px;
+  }
+
+  .logo {
+    width: 100px;
+  }
+
+  .call-btn {
+    width: 42px;
+    height: 42px;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  .hero-content {
+    order: 1;
+  }
+
+  .hero-image {
+    order: 2;
+    justify-content: center;
+  }
+
+  .hero-content h1 {
+    font-size: 38px;
+    margin-bottom: 20px;
+  }
+
+  .hero-content p {
+    font-size: 20px;
+  }
+
+  .hero-image img {
+    width: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 32px;
+  }
+
+  .hero-content p {
+    font-size: 18px;
+  }
+
+  .offer-bar {
+    font-size: 13px;
+    padding: 10px;
+  }
+
+  .hero-image img {
+    width: 250px;
+  }
+}

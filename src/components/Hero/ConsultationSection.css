@@ -1,0 +1,158 @@
+.consultation {
+  max-width: 1200px;
+  margin: 70px auto 50px;
+  background: #edf6ff;
+  border-radius: 24px;
+  padding: 45px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+
+.consultation-left {
+  flex: 1;
+}
+
+.consultation-left h2 {
+  font-size: 42px;
+  line-height: 1.35;
+  color: #111;
+  font-weight: 700;
+}
+
+.consultation-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.clove-logo {
+  width: 170px;
+  object-fit: contain;
+}
+
+.clinic-btn {
+  border: none;
+  background: transparent;
+  color: #8f65d8;
+  font-size: 22px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Benefit Strip - Moving Right to Left */
+.benefit-strip {
+  width: 100%;
+  border-top: 2px dotted #2d9cff;
+  border-bottom: 2px dotted #2d9cff;
+  padding: 22px 0;
+  overflow: hidden;
+  position: relative;
+  background: #edf6ff;
+}
+
+.benefit-track {
+  display: flex;
+  gap: 60px;
+  animation: scrollRightToLeft 20s linear infinite;
+  width: max-content;
+}
+
+.benefit-strip:hover .benefit-track {
+  animation-play-state: paused;
+}
+
+.benefit-item {
+  white-space: nowrap;
+  font-size: 22px;
+  color: #111;
+  padding: 0 10px;
+}
+
+.benefit-item strong {
+  font-weight: 700;
+}
+
+/* Animation keyframes for right to left movement */
+@keyframes scrollRightToLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .consultation {
+    padding: 40px;
+  }
+
+  .consultation-left h2 {
+    font-size: 32px;
+  }
+
+  .benefit-item {
+    font-size: 18px;
+  }
+
+  .benefit-track {
+    gap: 45px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .consultation {
+    flex-direction: column;
+    text-align: center;
+    margin: 40px 16px;
+    padding: 30px 20px;
+  }
+
+  .consultation-left h2 {
+    font-size: 24px;
+  }
+
+  .clove-logo {
+    width: 130px;
+  }
+
+  .clinic-btn {
+    font-size: 18px;
+  }
+
+  .benefit-strip {
+    padding: 16px 0;
+  }
+
+  .benefit-item {
+    font-size: 16px;
+  }
+
+  .benefit-track {
+    gap: 35px;
+    animation-duration: 15s;
+  }
+}
+
+@media (max-width: 480px) {
+  .consultation-left h2 {
+    font-size: 20px;
+  }
+
+  .benefit-item {
+    font-size: 14px;
+  }
+
+  .benefit-track {
+    gap: 25px;
+    animation-duration: 12s;
+  }
+}

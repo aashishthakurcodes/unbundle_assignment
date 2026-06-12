@@ -1,0 +1,178 @@
+.dream-smile {
+  background: #eef6fb;
+  padding: 80px 20px;
+}
+
+.dream-container {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+.dream-content {
+  flex: 1;
+}
+
+.dream-content h2 {
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 1.1;
+  color: #1f1f1f;
+  margin-bottom: 32px;
+  max-width: 450px;
+}
+
+.dream-content p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #444;
+  margin-bottom: 20px;
+  max-width: 520px;
+}
+
+.aligner-card {
+  width: 420px;
+  background: #fff;
+  border-radius: 18px;
+  padding: 28px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.card-header h3 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #333;
+}
+
+.card-header img {
+  width: 110px;
+  object-fit: contain;
+}
+
+.price-section {
+  margin-top: 15px;
+}
+
+.old-price {
+  color: #888;
+  text-decoration: line-through;
+  font-size: 16px;
+}
+
+.new-price {
+  margin-top: 10px;
+  font-size: 18px;
+  color: #333;
+}
+
+.new-price span {
+  color: #8b5cf6;
+  font-size: 34px;
+  font-weight: 700;
+}
+
+.tax-text {
+  color: #888;
+  font-size: 13px;
+  margin-top: 5px;
+}
+
+.benefits {
+  margin-top: 25px;
+}
+
+.benefit {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+  color: #444;
+}
+
+.check {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #62d39a;
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 12px;
+}
+
+.learn-more-btn {
+  margin-top: 20px;
+  border: none;
+  background: transparent;
+  color: #8b5cf6;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.learn-more-btn:hover {
+  opacity: 0.8;
+}
+
+/* Tablet */
+
+@media (max-width: 992px) {
+  .dream-container {
+    flex-direction: column;
+  }
+
+  .dream-content h2 {
+    font-size: 42px;
+    max-width: 100%;
+  }
+
+  .aligner-card {
+    width: 100%;
+    max-width: 500px;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 576px) {
+  .dream-smile {
+    padding: 50px 16px;
+  }
+
+  .dream-content h2 {
+    font-size: 34px;
+  }
+
+  .dream-content p {
+    font-size: 14px;
+  }
+
+  .aligner-card {
+    padding: 20px;
+  }
+
+  .card-header h3 {
+    font-size: 24px;
+  }
+
+  .card-header img {
+    width: 80px;
+  }
+
+  .new-price span {
+    font-size: 26px;
+  }
+}

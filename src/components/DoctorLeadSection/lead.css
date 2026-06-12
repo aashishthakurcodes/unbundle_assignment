@@ -1,0 +1,289 @@
+.doctor-section {
+  background: #eef6fb;
+  padding: 80px 20px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* STEPS */
+
+.steps-card {
+  background: #fff;
+  border-radius: 18px;
+  padding: 32px;
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  margin-bottom: 80px;
+}
+
+.steps-content {
+  flex: 1;
+}
+
+.steps-content h2 {
+  font-size: 42px;
+  line-height: 1.2;
+  margin-bottom: 40px;
+  color: #222;
+}
+
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.step-item {
+  display: flex;
+  gap: 15px;
+}
+
+.step-number {
+  min-width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #edf6ff;
+  border: 2px solid #8b5cf6;
+  color: #8b5cf6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+}
+
+.step-item h4 {
+  margin-bottom: 8px;
+}
+
+.step-item p {
+  color: #555;
+  line-height: 1.5;
+  font-size: 14px;
+}
+
+.video-box {
+  width: 350px;
+  position: relative;
+}
+
+.video-box img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 70px;
+  height: 70px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(139, 92, 246, 0.9);
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  transform: translate(-50%, -50%);
+}
+
+/* DOCTOR */
+
+.doctor-card {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  margin-bottom: 80px;
+}
+
+.doctor-content {
+  flex: 1;
+}
+
+.doctor-content h2 {
+  font-size: 52px;
+  line-height: 1.15;
+  margin-bottom: 25px;
+  color: #222;
+}
+
+.doctor-content p {
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+
+.doctor-content button {
+  background: #8b5cf6;
+  color: white;
+  border: none;
+  padding: 14px 32px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.doctor-image {
+  flex: 1;
+}
+
+.doctor-image img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+/* WHISTLE DIFFERENCE SECTION */
+.whistle-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  background: #fff;
+  border-radius: 18px;
+  padding: 40px;
+  margin-top: 20px;
+}
+
+.whistle-title {
+  flex: 1;
+}
+
+.whistle-title h2 {
+  font-size: 48px;
+  line-height: 1.2;
+  color: #222;
+  margin: 0;
+}
+
+.whistle-image {
+  flex: 1;
+}
+
+.whistle-image img {
+  width: 100%;
+  border-radius: 12px;
+  display: block;
+}
+
+/* TABLET */
+@media (max-width: 992px) {
+  .steps-card,
+  .doctor-card {
+    flex-direction: column;
+  }
+
+  .video-box {
+    width: 100%;
+  }
+
+  .doctor-content h2 {
+    font-size: 38px;
+  }
+
+  /* Whistle responsive - tablet */
+  .whistle-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+    padding: 30px;
+  }
+
+  .whistle-title h2 {
+    font-size: 36px;
+  }
+
+  .whistle-image {
+    width: 100%;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .steps-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .steps-content h2 {
+    font-size: 30px;
+  }
+
+  .doctor-content h2 {
+    font-size: 30px;
+  }
+
+  .doctor-section {
+    padding: 50px 16px;
+  }
+
+  /* Whistle responsive - mobile */
+  .whistle-header {
+    flex-direction: column;
+    gap: 25px;
+    padding: 25px 20px;
+  }
+
+  .whistle-title h2 {
+    font-size: 28px;
+    line-height: 1.3;
+  }
+
+  .whistle-image img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* SMALL MOBILE */
+@media (max-width: 480px) {
+  .steps-card {
+    padding: 20px;
+  }
+
+  .steps-content h2 {
+    font-size: 24px;
+    margin-bottom: 25px;
+  }
+
+  .step-item {
+    gap: 12px;
+  }
+
+  .step-item h4 {
+    font-size: 16px;
+  }
+
+  .step-item p {
+    font-size: 12px;
+  }
+
+  .play-btn {
+    width: 50px;
+    height: 50px;
+    font-size: 18px;
+  }
+
+  .doctor-content h2 {
+    font-size: 24px;
+  }
+
+  .doctor-content p {
+    font-size: 14px;
+  }
+
+  .doctor-content button {
+    padding: 12px 24px;
+    font-size: 14px;
+  }
+
+  /* Whistle responsive - small mobile */
+  .whistle-header {
+    padding: 20px 15px;
+    gap: 20px;
+  }
+
+  .whistle-title h2 {
+    font-size: 22px;
+  }
+}
