@@ -187,24 +187,6 @@ One of the main challenges was ensuring that the implementation closely matched 
 
 ---
 
-## Commit History
-
-Development was completed through multiple commits to demonstrate incremental progress and maintain proper commit hygiene.
-
-Example commit flow:
-
-```txt
-Initial Vite project setup
-Create reusable React components
-Implement responsive layouts
-Integrate local JSON data
-Add loading and error states
-Implement interactions and UI refinements
-Update README and documentation
-```
-
----
-
 ## Author
 
 **Name:** Aashish Singh
