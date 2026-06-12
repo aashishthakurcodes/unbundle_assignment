@@ -34,12 +34,21 @@
   max-width: 520px;
 }
 
+/* Card */
+
 .aligner-card {
   width: 420px;
   background: #fff;
   border-radius: 18px;
   padding: 28px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  transition: all 0.35s ease;
+  cursor: pointer;
+}
+
+.aligner-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 45px rgba(139, 92, 246, 0.15);
 }
 
 .card-header {
@@ -57,7 +66,14 @@
 .card-header img {
   width: 110px;
   object-fit: contain;
+  transition: transform 0.35s ease;
 }
+
+.aligner-card:hover .card-header img {
+  transform: scale(1.05);
+}
+
+/* Pricing */
 
 .price-section {
   margin-top: 15px;
@@ -79,6 +95,11 @@
   color: #8b5cf6;
   font-size: 34px;
   font-weight: 700;
+  transition: color 0.3s ease;
+}
+
+.aligner-card:hover .new-price span {
+  color: #7c3aed;
 }
 
 .tax-text {
@@ -86,6 +107,8 @@
   font-size: 13px;
   margin-top: 5px;
 }
+
+/* Benefits */
 
 .benefits {
   margin-top: 25px;
@@ -113,6 +136,8 @@
   font-size: 12px;
 }
 
+/* Button */
+
 .learn-more-btn {
   margin-top: 20px;
   border: none;
@@ -121,10 +146,16 @@
   font-weight: 600;
   font-size: 16px;
   cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .learn-more-btn:hover {
-  opacity: 0.8;
+  color: #7c3aed;
+  transform: translateX(6px);
+}
+
+.aligner-card:hover .learn-more-btn {
+  color: #7c3aed;
 }
 
 /* Tablet */

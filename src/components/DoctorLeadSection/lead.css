@@ -8,8 +8,7 @@
   margin: auto;
 }
 
-/* STEPS */
-
+/* STEPS CARD */
 .steps-card {
   background: #fff;
   border-radius: 18px;
@@ -18,8 +17,16 @@
   gap: 40px;
   align-items: center;
   margin-bottom: 80px;
+  transition: all 0.35s ease;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
 }
 
+.steps-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 45px rgba(139, 92, 246, 0.12);
+}
+
+/* CONTENT */
 .steps-content {
   flex: 1;
 }
@@ -31,6 +38,7 @@
   color: #222;
 }
 
+/* STEP GRID */
 .steps-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -40,6 +48,15 @@
 .step-item {
   display: flex;
   gap: 15px;
+  padding: 14px;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.step-item:hover {
+  background: #f7f4ff;
+  transform: translateX(6px);
 }
 
 .step-number {
@@ -53,10 +70,23 @@
   align-items: center;
   justify-content: center;
   font-weight: 600;
+  transition: all 0.3s ease;
 }
 
+.step-item:hover .step-number {
+  background: #8b5cf6;
+  color: #fff;
+  transform: scale(1.1);
+}
+
+/* TEXT */
 .step-item h4 {
   margin-bottom: 8px;
+  transition: color 0.3s ease;
+}
+
+.step-item:hover h4 {
+  color: #8b5cf6;
 }
 
 .step-item p {
@@ -65,14 +95,27 @@
   font-size: 14px;
 }
 
+/* VIDEO */
 .video-box {
   width: 350px;
   position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.35s ease;
+}
+
+.video-box:hover {
+  transform: scale(1.03);
 }
 
 .video-box img {
   width: 100%;
   border-radius: 12px;
+  transition: transform 0.4s ease;
+}
+
+.video-box:hover img {
+  transform: scale(1.05);
 }
 
 .play-btn {
@@ -88,15 +131,25 @@
   font-size: 24px;
   cursor: pointer;
   transform: translate(-50%, -50%);
+  transition: all 0.3s ease;
 }
 
-/* DOCTOR */
+.play-btn:hover {
+  transform: translate(-50%, -50%) scale(1.1);
+  background: #7c3aed;
+}
 
+/* DOCTOR CARD */
 .doctor-card {
   display: flex;
   align-items: center;
   gap: 50px;
   margin-bottom: 80px;
+  transition: all 0.35s ease;
+}
+
+.doctor-card:hover {
+  transform: translateY(-6px);
 }
 
 .doctor-content {
@@ -116,25 +169,41 @@
   margin-bottom: 30px;
 }
 
+/* BUTTON */
 .doctor-content button {
   background: #8b5cf6;
   color: white;
   border: none;
   padding: 14px 32px;
-  border-radius: 6px;
+  border-radius: 8px;
   cursor: pointer;
+  transition: all 0.3s ease;
 }
 
+.doctor-content button:hover {
+  background: #7c3aed;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(123, 97, 255, 0.2);
+}
+
+/* IMAGE */
 .doctor-image {
   flex: 1;
+  overflow: hidden;
+  border-radius: 12px;
 }
 
 .doctor-image img {
   width: 100%;
   border-radius: 12px;
+  transition: transform 0.5s ease;
 }
 
-/* WHISTLE DIFFERENCE SECTION */
+.doctor-card:hover .doctor-image img {
+  transform: scale(1.05);
+}
+
+/* WHISTLE HEADER */
 .whistle-header {
   display: flex;
   align-items: center;
@@ -144,10 +213,13 @@
   border-radius: 18px;
   padding: 40px;
   margin-top: 20px;
+  transition: all 0.35s ease;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
 }
 
-.whistle-title {
-  flex: 1;
+.whistle-header:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 45px rgba(139, 92, 246, 0.12);
 }
 
 .whistle-title h2 {
@@ -155,19 +227,24 @@
   line-height: 1.2;
   color: #222;
   margin: 0;
+  transition: color 0.3s ease;
 }
 
-.whistle-image {
-  flex: 1;
+.whistle-header:hover .whistle-title h2 {
+  color: #8b5cf6;
 }
 
 .whistle-image img {
   width: 100%;
   border-radius: 12px;
-  display: block;
+  transition: transform 0.4s ease;
 }
 
-/* TABLET */
+.whistle-header:hover .whistle-image img {
+  transform: scale(1.03);
+}
+
+/* RESPONSIVE */
 @media (max-width: 992px) {
   .steps-card,
   .doctor-card {
@@ -182,7 +259,6 @@
     font-size: 38px;
   }
 
-  /* Whistle responsive - tablet */
   .whistle-header {
     flex-direction: column;
     text-align: center;
@@ -193,13 +269,8 @@
   .whistle-title h2 {
     font-size: 36px;
   }
-
-  .whistle-image {
-    width: 100%;
-  }
 }
 
-/* MOBILE */
 @media (max-width: 768px) {
   .steps-grid {
     grid-template-columns: 1fr;
@@ -217,25 +288,11 @@
     padding: 50px 16px;
   }
 
-  /* Whistle responsive - mobile */
-  .whistle-header {
-    flex-direction: column;
-    gap: 25px;
-    padding: 25px 20px;
-  }
-
   .whistle-title h2 {
     font-size: 28px;
-    line-height: 1.3;
-  }
-
-  .whistle-image img {
-    width: 100%;
-    height: auto;
   }
 }
 
-/* SMALL MOBILE */
 @media (max-width: 480px) {
   .steps-card {
     padding: 20px;
@@ -243,15 +300,6 @@
 
   .steps-content h2 {
     font-size: 24px;
-    margin-bottom: 25px;
-  }
-
-  .step-item {
-    gap: 12px;
-  }
-
-  .step-item h4 {
-    font-size: 16px;
   }
 
   .step-item p {
@@ -275,12 +323,6 @@
   .doctor-content button {
     padding: 12px 24px;
     font-size: 14px;
-  }
-
-  /* Whistle responsive - small mobile */
-  .whistle-header {
-    padding: 20px 15px;
-    gap: 20px;
   }
 
   .whistle-title h2 {
