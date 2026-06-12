@@ -37,7 +37,7 @@
 }
 
 .call-btn:hover {
-  background: #7c3aed;
+  background: #eae7ef;
   transform: scale(1.1);
   box-shadow: 0 10px 25px rgba(139, 92, 246, 0.25);
 }
@@ -61,6 +61,7 @@
   color: #888;
 }
 
+/* HERO */
 .hero {
   background: #f8f5fd;
   min-height: 500px;

@@ -8,8 +8,16 @@
   justify-content: space-between;
   align-items: center;
   gap: 40px;
+  transition: all 0.35s ease;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
 }
 
+.consultation:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 45px rgba(139, 92, 246, 0.12);
+}
+
+/* LEFT */
 .consultation-left {
   flex: 1;
 }
@@ -19,8 +27,14 @@
   line-height: 1.35;
   color: #111;
   font-weight: 700;
+  transition: color 0.3s ease;
 }
 
+.consultation:hover .consultation-left h2 {
+  color: #2d2d2d;
+}
+
+/* RIGHT */
 .consultation-right {
   display: flex;
   flex-direction: column;
@@ -28,11 +42,18 @@
   gap: 30px;
 }
 
+/* LOGO */
 .clove-logo {
   width: 170px;
   object-fit: contain;
+  transition: transform 0.4s ease;
 }
 
+.consultation:hover .clove-logo {
+  transform: scale(1.05);
+}
+
+/* BUTTON */
 .clinic-btn {
   border: none;
   background: transparent;
@@ -43,9 +64,24 @@
   display: flex;
   align-items: center;
   gap: 8px;
+  transition: all 0.3s ease;
+  position: relative;
 }
 
-/* Benefit Strip - Moving Right to Left */
+.clinic-btn:hover {
+  color: #7c3aed;
+  transform: translateY(-2px);
+}
+
+.clinic-btn span {
+  transition: transform 0.3s ease;
+}
+
+.clinic-btn:hover span {
+  transform: translateY(3px);
+}
+
+/* BENEFIT STRIP */
 .benefit-strip {
   width: 100%;
   border-top: 2px dotted #2d9cff;
@@ -54,8 +90,14 @@
   overflow: hidden;
   position: relative;
   background: #edf6ff;
+  transition: all 0.3s ease;
 }
 
+.benefit-strip:hover {
+  background: #e8f3ff;
+}
+
+/* TRACK */
 .benefit-track {
   display: flex;
   gap: 60px;
@@ -67,18 +109,25 @@
   animation-play-state: paused;
 }
 
+/* ITEMS */
 .benefit-item {
   white-space: nowrap;
   font-size: 22px;
   color: #111;
   padding: 0 10px;
+  transition: all 0.3s ease;
+}
+
+.benefit-item:hover {
+  color: #8f65d8;
+  transform: scale(1.05);
 }
 
 .benefit-item strong {
   font-weight: 700;
 }
 
-/* Animation keyframes for right to left movement */
+/* ANIMATION */
 @keyframes scrollRightToLeft {
   0% {
     transform: translateX(0);
@@ -88,7 +137,7 @@
   }
 }
 
-/* Tablet */
+/* TABLET */
 @media (max-width: 1024px) {
   .consultation {
     padding: 40px;
@@ -107,7 +156,7 @@
   }
 }
 
-/* Mobile */
+/* MOBILE */
 @media (max-width: 768px) {
   .consultation {
     flex-direction: column;
@@ -142,6 +191,7 @@
   }
 }
 
+/* SMALL MOBILE */
 @media (max-width: 480px) {
   .consultation-left h2 {
     font-size: 20px;
