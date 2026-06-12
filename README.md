@@ -51,7 +51,10 @@ src/
 ├── components/
 │   ├── HeroSection/
 │   ├── ServicesSection/
-│   ├── TestimonialsSection/
+│   ├── ChooseUs/
+│   ├── SmileSection/
+│   ├── whistle/
+│   ├── whyWhistle/
 │
 ├── data/
 │   └── data.json
